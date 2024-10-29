@@ -1,4 +1,4 @@
-// Tab functionality with console logging for debugging
+// Tab functionality 
 function openTab(evt, tabName) {
     console.log(`Switching to tab: ${tabName}`); // Log when function is triggered
 
