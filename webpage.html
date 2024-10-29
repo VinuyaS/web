@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleaning Company</title>
+    <link rel="stylesheet" href="webpage.css">
+    <script defer src="scripts.js"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1 class="logo">Cleaning Company</h1>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#companies">Company Information</a>
+            <a href="#signup">Sign Up</a>
+            <a href="#login">Log In</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Reliable & Professional Cleaning Services</h2>
+            <p>Your home and office deserve the best. Discover our range of cleaning services tailored to your needs.</p>
+            <button onclick="scrollToSection('companies')">Explore Services</button>
+        </div>
+    </section>
+
+    <!-- Company Information Section -->
+    <section id="companies" class="company-section">
+        <h3>Company Information</h3>
+
+        <!-- Company 1: Residential and Commercial Cleaning -->
+        <div class="company">
+            <h4>Residential and Commercial Cleaning</h4>
+            <ul>
+                <li><strong>Regular Cleaning</strong>: $150</li>
+                <li><strong>Major Cleaning</strong>: $300</li>
+                <li><strong>Exterior Cleaning</strong>: $100</li>
+                <li><strong>Comprehensive Cleaning</strong>: $450</li>
+            </ul>
+        </div>
+
+        <!-- Company 2: Car Wash -->
+        <div class="company">
+            <h4>Car Wash</h4>
+            <ul>
+                <li><strong>Regular Cleaning</strong>: $30</li>
+                <li><strong>Major Cleaning</strong>: $50</li>
+                <li><strong>Exterior Cleaning</strong>: $40</li>
+                <li><strong>Comprehensive Cleaning</strong>: $75</li>
+            </ul>
+        </div>
+
+        <!-- Company 3: Pet Grooming -->
+        <div class="company">
+            <h4>Pet Grooming</h4>
+            <ul>
+                <li><strong>Standard Grooming (Nail + Haircut)</strong>: $50</li>
+                <li><strong>Wash</strong>: $30</li>
+                <li><strong>Wash + Grooming</strong>: $70</li>
+            </ul>
+            <p><em>Additional $20 charge for house calls.</em></p>
+        </div>
+        
+         <!-- Cancellation Policy Message -->
+    <p class="cancellation-policy">Please cancel 48 hours in advance to avoid any charges.</p>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h3>What Our Clients Say</h3>
+        <blockquote>"Fantastic service! The team was thorough and very professional." - Alex G.</blockquote>
+        <blockquote>"I love how fresh and clean my house feels every time. Highly recommended!" - Jamie S.</blockquote>
+    </section>
+
+    <!-- Sign-Up and Log-In Section -->
+    <section id="signup" class="account-section">
+        <h3>Create an Account</h3>
+        <button onclick="showAlert('Sign Up')">Sign Up</button>
+    </section>
+
+    <section id="login" class="account-section">
+        <h3>Already a Member?</h3>
+        <button onclick="showAlert('Log In')">Log In</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact Us: info@cleaningcompany.com | (555) 123-4567</p>
+        <div class="social-icons">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+</body>
+</html>
