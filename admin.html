@@ -1,87 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!--document language: English-->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Billing Management</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Make it mobile-Friendly-->
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="admin.css">
 </head>
 <body>
+  <!-- Login Section -->
+  <div id="loginSection" class="card center-card">
+    <h2>LOGIN AS ADMIN</h2>
+    <p>USERNAME</p>
+    <input type="text" id="username" placeholder="Username">
+    <p>PASSWORD</p>
+    <input type="password" id="password" placeholder="Password"><br>
+    <button onclick="adminLogin()">Login</button> <!--The button triggers the adminLogin() function when clicked-->
+    <p>Back to Homepage</p> <!--NOT DONE NOT DONE NOT DONE-->
+    <p id="loginError" class="error hidden">Invalid credentials, try again.</p> <!--Displays an error message if login fails-->
+  </div>
 
-<header>
-    <div class="navbar">
-        <div class="logo">Service Company - Admin Panel</div>
-        <div class="nav-links">
-            <a href="#" class="nav-link">Return Home</a>
-            <a href="#" class="nav-link">Admin Account</a>
+  <!-- Admin Panel Section, hidden initially until admin logs in -->
+  <div id="adminPanel" class="hidden"> <!--This panel is initially hidden and only appears when the user log in -->
+    <header class="header">
+      <!--Header Section: Could also include brand/logo or other details-->
+    </header>
+    <div id="admintitle">
+      <h2 class="card">Admin Dashboard</h2>
+      <!-- Navigation bar for different sections within the admin panel-->
+      <nav class="navbar">
+        <div class="horizontal-menu">
+          <ul>
+            <li><a href="#" onclick="showSection('editInfo')">Edit Information</a></li> <!--When the link is clecked, it calls the Js function of showSection(...)-->
+            <li><a href="#" onclick="showSection('manageServices')">Manage Services</a></li>
+            <li><a href="#" onclick="showSection('confirmation')">Confirmation of Services</a></li>
+            <li><a href="#" onclick="adminLogout()">Logout</a></li> <!--The link calls the adminLogout() function in the Js, which is responsible for logging the admin out-->
+          </ul>
         </div>
+      </nav>
     </div>
-</header>
 
-<div class="tab">
-    <button class="tablinks" onclick="openTab(event, 'ManageBillings')" id="defaultOpen">Manage Billings</button>
-    <button class="tablinks" onclick="openTab(event, 'SendNotices')">Send Late Notices</button>
-    <button class="tablinks" onclick="openTab(event, 'UpdateStatus')">Update Client Status</button>
-</div>
 
-<!-- Manage Billings Tab Content -->
-<div id="ManageBillings" class="tab-content">
-    <h2>Manage Client Billings (Paid Bills)</h2>
-    <table id="paidBillingsTable">
-        <thead>
-        <tr>
-            <th>Client</th>
-            <th>Service</th>
-            <th>Date</th>
-            <th>Amount</th>
-            <th>Status</th>
-        </tr>
-        </thead>
-        <tbody>
-        <!-- Placeholder for dynamic content -->
-        </tbody>
-    </table>
-</div>
+    <!--Main container for admin panel section-->
+    <!-- Cards for Sections -->
+    <div class="card-container">
+      <!-- Card: Edit Business Information -->
+      <div id="editInfo" class="card section">
+        <h3 class="title">Edit Business Information</h3>
+        <p>Business Name</p>
+        <input type="text" id="businessName" placeholder="Business Name">
+        <p>Address</p>
+        <input type="text" id="businessAddress" placeholder="Address">
+        <p>Logo</p>
+        <input type="text" id="businessLogo" placeholder="Logo URL">
+        <p>Phone</p>
+        <input type="text" id="businessPhone" placeholder="Phone">
+        <button onclick="updateBusinessInfo()">Update</button>
+      </div>
 
-<!-- Send Late Notices Tab Content -->
-<div id="SendNotices" class="tab-content">
-    <h2>Unpaid Bills - Send Late Notices</h2>
-    <table id="unpaidNoticesTable">
-        <thead>
-        <tr>
-            <th>Client</th>
-            <th>Service</th>
-            <th>Date of Service</th>
-            <th>Amount Due</th>
-            <th>Days Overdue</th>
-            <th>Send Notice</th>
-        </tr>
-        </thead>
-        <tbody>
-        <!-- Placeholder for dynamic content -->
-        </tbody>
-    </table>
-</div>
+      <!-- Card: Manage Services -->
+      <div id="manageServices" class="card section hidden">
+        <h3 class="title">Manage Services</h3>
+        <p>Service Name</p>
+        <input type="text" id="newService" placeholder="Service Name">
+        <p>Service Price</p>
+        <input type="number" id="servicePrice" placeholder="Service Price">
+        <button onclick="addService()">Add Service</button>
+        <ul id="servicesList"></ul>
+      </div>
 
-<!-- Update Client Status Tab Content -->
-<div id="UpdateStatus" class="tab-content">
-    <h2>Update Client Billing Status</h2>
-    <table id="updateStatusTable">
-        <thead>
-        <tr>
-            <th>Client</th>
-            <th>Service</th>
-            <th>Current Status</th>
-            <th>New Status</th>
-        </tr>
-        </thead>
-        <tbody>
-        <!-- Placeholder for dynamic content -->
-        </tbody>
-    </table>
-</div>
+      <!-- Card: Confirmation of Services -->
+      <div id="confirmation" class="card section hidden">
+        <h3 class="title">Confirmation of Services</h3>
+        <table id="confirmationTable">
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Price</th>
+              <th>Confirm</th>
+            </tr>
+          </thead>
+          <tbody id="confirmationTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 
-<script src="adminScript.js"></script>
-
+  <script src="admin.js"></script>
 </body>
 </html>
