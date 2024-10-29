@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Billing Overview</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header with Navigation -->
+<header>
+  <div class="navbar">
+    <div class="logo">Service Company</div>
+    <div class="nav-links">
+      <a href="#" class="nav-link">Return Home</a>
+      <a href="#" class="nav-link">User's Account</a>
+    </div>
+  </div>
+</header>
+
+<!-- Tab navigation -->
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'UpcomingBills')" id="defaultOpen">Upcoming Bills</button>
+  <button class="tablinks" onclick="openTab(event, 'PaidBills')">Paid Bills</button>
+</div>
+
+<!-- Upcoming Bills Tab Content -->
+<div id="UpcomingBills" class="tab-content">
+  <h2>Upcoming Bills</h2>
+  <table id="upcomingBillsTable">
+    <thead>
+    <tr>
+      <th>Service</th>
+      <th>Date</th>
+      <th>Amount</th>
+      <th>Status</th>
+      <th>Download Invoice</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Placeholder for dynamic content -->
+    </tbody>
+  </table>
+  <!-- Buttons underneath the table -->
+  <div class="action-buttons">
+    <a href="#" class="button">Book Now</a>
+    <a href="#" class="button">Leave Review</a>
+  </div>
+</div>
+
+<!-- Paid Bills Tab Content -->
+<div id="PaidBills" class="tab-content">
+  <h2>Paid Bills</h2>
+  <table id="paidBillsTable">
+    <thead>
+    <tr>
+      <th>Service</th>
+      <th>Date</th>
+      <th>Amount</th>
+      <th>Status</th>
+      <th>Download Receipt</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Placeholder for dynamic content -->
+    </tbody>
+  </table>
+  <!-- Buttons underneath the table -->
+  <div class="action-buttons">
+    <a href="#" class="button">Book Now</a>
+    <a href="#" class="button">Leave Review</a>
+  </div>
+</div>
+
+<!-- Link to external JavaScript file -->
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
