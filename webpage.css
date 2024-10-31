@@ -79,6 +79,20 @@ header nav a:hover {
     width: 100%;
 }
 
+/* Dropdown Styles in Booking Section */
+.service-dropdown {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
 .services {
     margin-bottom: 15px;
 }
@@ -252,22 +266,67 @@ header nav a:hover {
 
 /* Testimonials Section */
 .testimonials {
-    background-color: #3498db;
-    padding: 40px 20px;
+    background-color: #ecf0f1;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     text-align: center;
-    color: white;
+    margin: 40px 20px;
 }
 
 .testimonials h3 {
     font-size: 2rem;
-    margin-bottom: 20px;
+    color: #34495e;
+    font-weight: bold;
+    margin-bottom: 30px;
 }
 
-.testimonials blockquote {
-    font-style: italic;
-    margin: 15px 0;
-    font-size: 1.1rem;
+/* Individual Testimonial Box */
+.testimonial-box {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    text-align: left;
+    position: relative;
+    transition: transform 0.3s ease;
 }
+
+.testimonial-box:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-box::before {
+    content: "“";
+    font-size: 2.5rem;
+    color: #ecf0f1;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+}
+
+.testimonial-box blockquote {
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
+    padding-left: 15px;
+    position: relative;
+}
+
+.testimonial-box blockquote::after {
+    content: "”";
+    font-size: 2.5rem;
+    color: #ecf0f1;
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+}
+
+
 
 /* Account Section */
 .account-section {
