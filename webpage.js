@@ -19,7 +19,7 @@ function addToCart() {
         return;
     }
 
-    // Retrieve selected date
+    // Retrieve selected date 
     const date = document.getElementById('date').value;
 
     // Retrieve selected services from dropdowns
