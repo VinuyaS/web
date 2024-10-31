@@ -265,6 +265,17 @@ header nav a:hover {
 
 
 /* Testimonials Section */
+
+
+.testimonials h3 {
+    font-size: 70px;
+    color: #34495e;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    margin: 50px;
+}
+
 .testimonials {
     background-color: #ecf0f1;
     padding: 50px;
@@ -272,27 +283,25 @@ header nav a:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     text-align: center;
     margin: 40px 20px;
+    display: flex;
+    justify-content: flex-end; /* Aligns items to the right */
+    align-items: flex-start; /* Ensures the items align at the top */
+    flex-direction: column; /* Keeps items stacked vertically */
 }
 
-.testimonials h3 {
-    font-size: 2rem;
-    color: #34495e;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
-/* Individual Testimonial Box */
 .testimonial-box {
     background-color: #3498db;
     color: white;
     padding: 20px;
-    margin: 20px auto;
+    margin: 20px 0;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 600px;
     text-align: left;
     position: relative;
     transition: transform 0.3s ease;
+    align-self: flex-end; /* Aligns the testimonial box to the right */
+    margin-left: auto; /* Ensure it sticks to the right */
 }
 
 .testimonial-box:hover {
@@ -325,6 +334,7 @@ header nav a:hover {
     bottom: -10px;
     right: 10px;
 }
+
 
 
 
