@@ -76,62 +76,41 @@
     <p class="cancellation-policy">Please cancel 48 hours in advance to avoid any charges.</p>
     </section>
 
-    <!-- Booking Section -->
+   <!-- Booking Section -->
 <section id="booking" class="booking-section">
     <h3>Book Our Services</h3>
     <form id="booking-form">
         <div class="services">
             <h4>Select Services:</h4>
 
-            <!-- Residential and Commercial Cleaning -->
-            <div class="service-option">
-                <input type="checkbox" id="res-cleaning-regular" value="Residential - Regular Cleaning - $150">
-                <label for="res-cleaning-regular">Residential - Regular Cleaning - $150</label>
-            </div>
-            <div class="service-option">
-                <input type="checkbox" id="res-cleaning-major" value="Residential - Major Cleaning - $300">
-                <label for="res-cleaning-major">Residential - Major Cleaning - $300</label>
-            </div>
-            <div class="service-option">
-                <input type="checkbox" id="res-cleaning-exterior" value="Residential - Exterior Cleaning - $100">
-                <label for="res-cleaning-exterior">Residential - Exterior Cleaning - $100</label>
-            </div>
-            <div class="service-option">
-                <input type="checkbox" id="res-cleaning-comprehensive" value="Residential - Comprehensive Cleaning - $450">
-                <label for="res-cleaning-comprehensive">Residential - Comprehensive Cleaning - $450</label>
-            </div>
+            <!-- Residential and Commercial Cleaning Dropdown -->
+            <label for="residential-services">Residential and Commercial Cleaning:</label>
+            <select id="residential-services" class="service-dropdown">
+                <option value="">Select a Service</option>
+                <option value="Residential - Regular Cleaning - $150">Regular Cleaning - $150</option>
+                <option value="Residential - Major Cleaning - $300">Major Cleaning - $300</option>
+                <option value="Residential - Exterior Cleaning - $100">Exterior Cleaning - $100</option>
+                <option value="Residential - Comprehensive Cleaning - $450">Comprehensive Cleaning - $450</option>
+            </select>
 
-            <!-- Car Wash -->
-            <div class="service-option">
-                <input type="checkbox" id="car-wash-regular" value="Car Wash - Regular Cleaning - $30">
-                <label for="car-wash-regular">Car Wash - Regular Cleaning - $30</label>
-            </div>
-            <div class="service-option">
-                <input type="checkbox" id="car-wash-major" value="Car Wash - Major Cleaning - $50">
-                <label for="car-wash-major">Car Wash - Major Cleaning - $50</label>
-            </div>
-            <div class="service-option">
-                <input type="checkbox" id="car-wash-exterior" value="Car Wash - Exterior Cleaning - $40">
-                <label for="car-wash-exterior">Car Wash - Exterior Cleaning - $40</label>
-            </div>
-            <div class="service-option">
-                <input type="checkbox" id="car-wash-comprehensive" value="Car Wash - Comprehensive Cleaning - $75">
-                <label for="car-wash-comprehensive">Car Wash - Comprehensive Cleaning - $75</label>
-            </div>
+            <!-- Car Wash Dropdown -->
+            <label for="carwash-services">Car Wash:</label>
+            <select id="carwash-services" class="service-dropdown">
+                <option value="">Select a Service</option>
+                <option value="Car Wash - Regular Cleaning - $30">Regular Cleaning - $30</option>
+                <option value="Car Wash - Major Cleaning - $50">Major Cleaning - $50</option>
+                <option value="Car Wash - Exterior Cleaning - $40">Exterior Cleaning - $40</option>
+                <option value="Car Wash - Comprehensive Cleaning - $75">Comprehensive Cleaning - $75</option>
+            </select>
 
-            <!-- Pet Grooming -->
-            <div class="service-option">
-                <input type="checkbox" id="pet-grooming-standard" value="Pet Grooming - Standard Grooming - $50">
-                <label for="pet-grooming-standard">Pet Grooming - Standard Grooming (Nail + Haircut) - $50</label>
-            </div>
-            <div class="service-option">
-                <input type="checkbox" id="pet-grooming-wash" value="Pet Grooming - Wash - $30">
-                <label for="pet-grooming-wash">Pet Grooming - Wash - $30</label>
-            </div>
-            <div class="service-option">
-                <input type="checkbox" id="pet-grooming-combo" value="Pet Grooming - Wash + Grooming - $70">
-                <label for="pet-grooming-combo">Pet Grooming - Wash + Grooming - $70</label>
-            </div>
+            <!-- Pet Grooming Dropdown -->
+            <label for="petgrooming-services">Pet Grooming:</label>
+            <select id="petgrooming-services" class="service-dropdown">
+                <option value="">Select a Service</option>
+                <option value="Pet Grooming - Standard Grooming - $50">Standard Grooming (Nail + Haircut) - $50</option>
+                <option value="Pet Grooming - Wash - $30">Wash - $30</option>
+                <option value="Pet Grooming - Wash + Grooming - $70">Wash + Grooming - $70</option>
+            </select>
         </div>
 
         <div class="date-section">
@@ -149,12 +128,18 @@
 </section>
 
 
+
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials">
         <h3>What Our Clients Say</h3>
-        <blockquote>"Fantastic service! The team was thorough and very professional." - Alex G.</blockquote>
-        <blockquote>"I love how fresh and clean my house feels every time. Highly recommended!" - Jamie S.</blockquote>
+        <div class="testimonial-box">
+            <blockquote>"Fantastic service! The team was thorough and very professional." - Alex G.</blockquote>
+        </div>
+        <div class="testimonial-box">
+            <blockquote>"I love how fresh and clean my house feels every time. Highly recommended!" - Jamie S.</blockquote>
+        </div>
     </section>
+    
 
     <!-- Sign-Up and Log-In Section -->
     <section id="signup" class="account-section">
