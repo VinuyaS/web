@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en"> <!--document language: English-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Make it mobile-Friendly-->
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="adminFinal.css">
+</head>
+<body>
+  <!-- Login Section -->
+  <div id="loginSection" class="card center-card">
+    <h2>LOGIN AS ADMIN</h2>
+    <p>USERNAME</p>
+    <input type="text" id="username" placeholder="Username">
+    <p>PASSWORD</p>
+    <input type="password" id="password" placeholder="Password"><br>
+    <button onclick="adminLogin()">Login</button> <!--The button triggers the adminLogin() function when clicked-->
+    <p id="loginError" class="error hidden">Invalid credentials, try again.</p> <!--Displays an error message if login fails-->
+  </div>
+
+  <!-- Admin Panel Section, hidden initially until admin logs in -->
+  <div id="adminPanel" class="hidden"> <!--This panel is initially hidden and only appears when the user log in -->
+    <header class="header">
+    </header>
+    <div id="admintitle">
+      <h2 class="card">Admin Dashboard</h2>
+      <!-- Navigation bar for different sections within the admin panel-->
+      <nav class="navbar">
+        <div class="horizontal-menu">
+          <ul>
+            <li><a href="#" onclick="showSection('editInfo')">Edit Information</a></li> <!--When the link is clecked, it calls the Js function of showSection(...)-->
+            <li><a href="#" onclick="showSection('manageServices')">Edit Service</a></li>
+            <li><a href="#" onclick="showSection('confirmation')">Confirmation of Services</a></li>
+            <li><a href="#" onclick="showSection('ManageBillings')">Manage Billings</a></li>
+            <li><a href="#" onclick="showSection('SendNotices')">Send Late Notices</a></li>
+            <li><a href="#" onclick="showSection('UpdateStatus')">Update Client Status</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!--Main container for admin panel section-->
+    <!-- Cards for Sections -->
+    <div class="card-container">
+      <!-- Card: Edit Business Information -->
+      <div id="editInfo" class="card section">
+        <h3 class="title">Edit Business Information</h3>
+        <p>Business Name</p>
+        <input type="text" id="businessName" placeholder="Business Name">
+        <p>Address</p>
+        <input type="text" id="businessAddress" placeholder="Address">
+        <p>Logo</p>
+        <input type="text" id="businessLogo" placeholder="Logo URL">
+        <p>Phone</p>
+        <input type="text" id="businessPhone" placeholder="Phone">
+        <button onclick="updateBusinessInfo()">Update</button>
+      </div>
+
+      <!-- Card: Manage Services -->
+      <div id="manageServices" class="card section hidden">
+        <h3 class="title">Manage Services</h3>
+        <p>Service Name</p>
+        <input type="text" id="newService" placeholder="Service Name">
+        <p>Service Price</p>
+        <input type="number" id="servicePrice" placeholder="Service Price">
+        <button onclick="addService()">Add Service</button>
+        <ul id="servicesList"></ul>
+
+        <table id="servicesTable">
+          <thead>
+              <tr>
+                  <th>Service Name</th>
+                  <th>Price</th>
+                  <th>Modify</th>
+                  <th>Delete</th>
+              </tr>
+          </thead>
+          <tbody>
+              <!-- JavaScript will populate rows here -->
+          </tbody>
+      </table>
+      </div>
+
+      <!-- Card: Confirmation of Services -->
+      <div id="confirmation" class="card section hidden">
+        <h3 class="title">Confirmation of Services</h3>
+        <table id="confirmationTable">
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Price</th>
+              <th>Confirm</th>
+            </tr>
+          </thead>
+          <tbody id="confirmationTableBody">
+             <!-- Placeholder for dynamic content -->
+          </tbody>
+        </table>
+      </div>
+      <!-- Manage Billings Tab Content -->
+<div id="ManageBillings" class="card section hidden">
+    <h3>Manage Client Billings (Paid Bills)</h3>
+    <table id="paidBillingsTable">
+        <thead>
+        <tr>
+            <th>Client</th>
+            <th>Service</th>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Placeholder for dynamic content -->
+        </tbody>
+    </table>
+</div>
+
+<!-- Send Late Notices Tab Content -->
+<div id="SendNotices" class="card section hidden">
+    <h3>Unpaid Bills - Send Late Notices</h3>
+    <table id="unpaidNoticesTable">
+        <thead>
+        <tr>
+            <th>Client</th>
+            <th>Service</th>
+            <th>Date of Service</th>
+            <th>Amount Due</th>
+            <th>Days Overdue</th>
+            <th>Send Notice</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Placeholder for dynamic content -->
+        </tbody>
+    </table>
+</div>
+
+<!-- Update Client Status Tab Content -->
+<div id="UpdateStatus" class="card section hidden">
+    <h3>Update Client Billing Status</h3>
+    <table id="updateStatusTable">
+        <thead>
+        <tr>
+            <th>Client</th>
+            <th>Service</th>
+            <th>Current Status</th>
+            <th>New Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Placeholder for dynamic content -->
+        </tbody>
+    </table>
+
+</div>
+ </div>
+    <div id="logoutButton" onclick="adminLogout()">Logout</div>
+  </div>
+  <script src="adminFinal.js"></script>
+</body>
+</html>
