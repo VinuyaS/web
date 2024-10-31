@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Billing Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">Service Company - Admin Panel</div>
+        <div class="nav-links">
+            <a href="#" class="nav-link">Return Home</a>
+            <a href="#" class="nav-link">Admin Account</a>
+        </div>
+    </div>
+</header>
+
+<div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'ManageBillings')" id="defaultOpen">Manage Billings</button>
+    <button class="tablinks" onclick="openTab(event, 'SendNotices')">Send Late Notices</button>
+    <button class="tablinks" onclick="openTab(event, 'UpdateStatus')">Update Client Status</button>
+</div>
+
+<!-- Manage Billings Tab Content -->
+<div id="ManageBillings" class="tab-content">
+    <h2>Manage Client Billings (Paid Bills)</h2>
+    <table id="paidBillingsTable">
+        <thead>
+        <tr>
+            <th>Client</th>
+            <th>Service</th>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Placeholder for dynamic content -->
+        </tbody>
+    </table>
+</div>
+
+<!-- Send Late Notices Tab Content -->
+<div id="SendNotices" class="tab-content">
+    <h2>Unpaid Bills - Send Late Notices</h2>
+    <table id="unpaidNoticesTable">
+        <thead>
+        <tr>
+            <th>Client</th>
+            <th>Service</th>
+            <th>Date of Service</th>
+            <th>Amount Due</th>
+            <th>Days Overdue</th>
+            <th>Send Notice</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Placeholder for dynamic content -->
+        </tbody>
+    </table>
+</div>
+
+<!-- Update Client Status Tab Content -->
+<div id="UpdateStatus" class="tab-content">
+    <h2>Update Client Billing Status</h2>
+    <table id="updateStatusTable">
+        <thead>
+        <tr>
+            <th>Client</th>
+            <th>Service</th>
+            <th>Current Status</th>
+            <th>New Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Placeholder for dynamic content -->
+        </tbody>
+    </table>
+</div>
+
+<script src="adminScript.js"></script>
+
+</body>
+</html>
